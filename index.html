@@ -5,10 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matemáticas</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="logo.ico">
 </head>
 <body>
     <header>
-        <h1>Matemáticas</h1>
+        <h1>Matemáticas Básicas</h1>
+        <img src="logo.jpeg">
     </header>
 
     <nav>
@@ -19,23 +21,77 @@
     </nav>
 
     <section id="inicio">
-                    
+        <h2>Bienvenido</h2>
+        <p>Bienvenido a Matemáticas Básicas, tu recurso en línea para aprender y practicar conceptos fundamentales de matemáticas de una manera interactiva y divertida.</p>
+        <p>Explora nuestras secciones para aprender sobre operaciones básicas y practicar con nuestra calculadora dinámica.</p>
+        <p>No dudes en contactarnos si tienes alguna pregunta o sugerencia. ¡Que disfrutes aprendiendo matemáticas!</p>
     </section>
     
 
     <section id="operaciones">
-        <h2>Operaciones Básicas</h2>
-  
+        <h2>Operaciones Matemáticas</h2>
+    
+        <div class="operacion">
+            <h3>Suma</h3>
+            <p>La suma es una operación básica en matemáticas que consiste en combinar dos o más números para obtener un total.</p>
+            <p>Ejemplo: 2 + 3 = 5</p>
+        </div>
+    
+        <div class="operacion">
+            <h3>Resta</h3>
+            <p>La resta es una operación que consiste en quitar un número de otro para encontrar la diferencia entre ellos.</p>
+            <p>Ejemplo: 8 - 3 = 5</p>
+        </div>
+    
+        <div class="operacion">
+            <h3>Multiplicación</h3>
+            <p>La multiplicación es una operación matemática que consiste en repetir la suma de un número una cierta cantidad de veces.</p>
+            <p>Ejemplo: 4 × 3 = 12</p>
+        </div>
+    
+        <div class="operacion">
+            <h3>División</h3>
+            <p>La división es una operación matemática que consiste en repartir una cantidad en partes iguales.</p>
+            <p>Ejemplo: 10 ÷ 2 = 5</p>
+        </div>
     </section>
+    
 
-    <section id ="calculadora">
+    <section id="calculadora">
         <h2>Calculadora</h2>
- 
+        <div class="calculator">
+            <input type="text" id="pantalla" readonly>
+            <br>
+            <button onclick="limpiarPantalla()">C</button>
+            <button onclick="agregar('7')">7</button>
+            <button onclick="agregar('8')">8</button>
+            <button onclick="agregar('9')">9</button>
+            <br>
+            <button onclick="agregar('4')">4</button>
+            <button onclick="agregar('5')">5</button>
+            <button onclick="agregar('6')">6</button>
+            <button onclick="agregar('+')">+</button>
+            <br>
+            <button onclick="agregar('1')">1</button>
+            <button onclick="agregar('2')">2</button>
+            <button onclick="agregar('3')">3</button>
+            <button onclick="agregar('-')">-</button>
+            <br>
+            <button onclick="agregar('0')">0</button>
+            <button onclick="agregar('.')">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="agregar('*')">*</button>
+            <br>
+            <button onclick="agregar('/')">/</button>
+        </div>
     </section>
 
-    <section id ="sobre-nosotros">
+    <section id="sobre-nosotros">
         <h2>Sobre Nosotros</h2>
-
+        <p>Somos estudiantes de Ingeniería en Ciencias de la Computación apasionado por la educación y las matemáticas. Nuestra misión es hacer que el aprendizaje de las matemáticas sea accesible, interesante y divertido para todos.</p>
+        <p>Nuestro sitio web ofrece recursos educativos, herramientas interactivas y contenido de calidad para ayudar a estudiantes de todas las edades a mejorar sus habilidades matemáticas y desarrollar su confianza en esta área.</p>
+        <p>Estamos comprometidos con la excelencia y la innovación en la enseñanza de las matemáticas, y trabajamos constantemente para mejorar y expandir nuestros recursos para satisfacer las necesidades de nuestros usuarios.</p>
+        <p>No dudes en ponerte en contacto con nosotros si tienes alguna pregunta, sugerencia o comentario. ¡Esperamos poder ayudarte en tu viaje de aprendizaje de las matemáticas!</p>
     </section>
 
     <footer>
