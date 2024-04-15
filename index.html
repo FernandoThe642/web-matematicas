@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matemáticas</title>
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" href="logo.ico">
+    <script src="script.js"></script>
+    <link rel="icon" href="icono.ico" type="image/x-icon">
 </head>
 <body>
     <header>
@@ -22,9 +23,9 @@
 
     <section id="inicio">
         <h2>Bienvenido</h2>
-        <p>Bienvenido a Matemáticas Básicas, tu recurso en línea para aprender y practicar conceptos fundamentales de matemáticas de una manera interactiva y divertida.</p>
-        <p>Explora nuestras secciones para aprender sobre operaciones básicas y practicar con nuestra calculadora dinámica.</p>
-        <p>No dudes en contactarnos si tienes alguna pregunta o sugerencia. ¡Que disfrutes aprendiendo matemáticas!</p>
+        <p class="seccion">Bienvenido a Matemáticas Básicas, tu recurso en línea para aprender y practicar conceptos fundamentales de matemáticas de una manera interactiva y divertida.
+        Explora nuestras secciones para aprender sobre operaciones básicas y practicar con nuestra calculadora dinámica.
+        No dudes en contactarnos si tienes alguna pregunta o sugerencia. ¡Que disfrutes aprendiendo matemáticas!</p>
     </section>
     
 
@@ -33,26 +34,34 @@
     
         <div class="operacion">
             <h3>Suma</h3>
-            <p>La suma es una operación básica en matemáticas que consiste en combinar dos o más números para obtener un total.</p>
-            <p>Ejemplo: 2 + 3 = 5</p>
+            <p class="seccion">La suma es una operación matemática que consiste en combinar dos o más cantidades para obtener un total.
+                                Es representada por el símbolo "+" y el resultado se llama la suma.</p>
+            <button onclick="toggleSections(1)">Ejemplos</button>
+            <p class="ejemplo1">2 + 3 = 5 <br><br> 8 + 9 = 17   <br><br> 5 + 7 = 12  <br><br> 10 + 3 = 13   </p>
         </div>
     
         <div class="operacion">
             <h3>Resta</h3>
-            <p>La resta es una operación que consiste en quitar un número de otro para encontrar la diferencia entre ellos.</p>
-            <p>Ejemplo: 8 - 3 = 5</p>
+            <p class="seccion">La resta es una operación matemática que consiste en encontrar la diferencia entre dos cantidades. 
+                               Se representa por el símbolo "-" y el resultado se llama la diferencia.</p>
+            <button onclick="toggleSections(2)">Ejemplos</button>
+            <p class="ejemplo2"> 8 - 3 = 5 <br><br> 15 - 7 = 8 <br><br> 20 - 12 = 8 <br><br> 25 - 18 = 7 </p>
         </div>
     
         <div class="operacion">
             <h3>Multiplicación</h3>
-            <p>La multiplicación es una operación matemática que consiste en repetir la suma de un número una cierta cantidad de veces.</p>
-            <p>Ejemplo: 4 × 3 = 12</p>
+            <p class="seccion">La multiplicación es una operación matemática que consiste en sumar repetidamente un número una cantidad de veces determinada. 
+                            Es representada por el símbolo "×" o "*". El resultado se llama producto.</p>
+            <button onclick="toggleSections(3)">Ejemplos</button>
+            <p class="ejemplo3">4 × 3 = 12 <br><br> 7 × 5 = 35 <br><br> 9 × 6 = 54 <br><br> 2 × 10 = 20</p>
         </div>
     
         <div class="operacion">
             <h3>División</h3>
-            <p>La división es una operación matemática que consiste en repartir una cantidad en partes iguales.</p>
-            <p>Ejemplo: 10 ÷ 2 = 5</p>
+            <p class="seccion"> La división es una operación matemática que consiste en distribuir una cantidad en partes iguales. 
+                                Se representa por el símbolo "÷" o "/", y el resultado se llama cociente.</p>
+            <button onclick="toggleSections(4)">Ejemplos</button>
+            <p class="ejemplo4">12 ÷ 3 = 4 <br><br> 30 ÷ 5 = 6 <br><br> 45 ÷ 9 = 5 <br><br> 64 ÷ 8 = 8</p>
         </div>
     </section>
     
@@ -62,10 +71,10 @@
         <div class="calculator">
             <input type="text" id="pantalla" readonly>
             <br>
-            <button onclick="limpiarPantalla()">C</button>
             <button onclick="agregar('7')">7</button>
             <button onclick="agregar('8')">8</button>
             <button onclick="agregar('9')">9</button>
+            <button onclick="limpiarPantalla()">C</button>
             <br>
             <button onclick="agregar('4')">4</button>
             <button onclick="agregar('5')">5</button>
@@ -79,23 +88,26 @@
             <br>
             <button onclick="agregar('0')">0</button>
             <button onclick="agregar('.')">.</button>
-            <button onclick="calculate()">=</button>
+            <button onclick="agregar('/')">/</button>
             <button onclick="agregar('*')">*</button>
             <br>
-            <button onclick="agregar('/')">/</button>
+            <button onclick="calcular()">=</button>
         </div>
     </section>
 
+ 
     <section id="sobre-nosotros">
         <h2>Sobre Nosotros</h2>
-        <p>Somos estudiantes de Ingeniería en Ciencias de la Computación apasionado por la educación y las matemáticas. Nuestra misión es hacer que el aprendizaje de las matemáticas sea accesible, interesante y divertido para todos.</p>
-        <p>Nuestro sitio web ofrece recursos educativos, herramientas interactivas y contenido de calidad para ayudar a estudiantes de todas las edades a mejorar sus habilidades matemáticas y desarrollar su confianza en esta área.</p>
-        <p>Estamos comprometidos con la excelencia y la innovación en la enseñanza de las matemáticas, y trabajamos constantemente para mejorar y expandir nuestros recursos para satisfacer las necesidades de nuestros usuarios.</p>
-        <p>No dudes en ponerte en contacto con nosotros si tienes alguna pregunta, sugerencia o comentario. ¡Esperamos poder ayudarte en tu viaje de aprendizaje de las matemáticas!</p>
+        <p class="seccion">Somos estudiantes de Ingeniería en Ciencias de la Computación apasionado por la educación y las matemáticas. Nuestra misión es hacer que el aprendizaje de las matemáticas sea accesible, interesante y divertido para todos.
+           Nuestro sitio web ofrece recursos educativos, herramientas interactivas y contenido de calidad para ayudar a estudiantes de todas las edades a mejorar sus habilidades matemáticas y desarrollar su confianza en esta área. 
+           Estamos comprometidos con la excelencia y la innovación en la enseñanza de las matemáticas, y trabajamos constantemente para mejorar y expandir nuestros recursos para satisfacer las necesidades de nuestros usuarios. 
+           No dudes en ponerte en contacto con nosotros si tienes alguna pregunta, sugerencia o comentario. ¡Esperamos poder ayudarte en tu viaje de aprendizaje de las matemáticas!</p>
     </section>
+    <br>
+    <br>
 
     <footer>
-        <p>© 2024 Fernando Sánchez</p>
+        <p >© 2024 Fernando Sánchez</p>
     </footer>    
     
 </body>
